@@ -10,6 +10,8 @@ end
 get('/result') do
   @result = (params.fetch('input_sentence')).find_and_replace((params.fetch('input_word')), (params.fetch('input_replace')))
   erb(:result)
+  @counter = (params.fetch('input_sentence')).counter((params.fetch('input_word')))
+  erb(:result)
 end
 
 # @user1 = params.fetch('user1')
