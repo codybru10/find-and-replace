@@ -1,3 +1,18 @@
+# easy substitute word
+
+class String
+  define_method(:easy_replace) do |find_word, replace_word|
+    self.downcase()
+      if self.include?(find_word)
+        new_sentence = self.gsub(find_word, replace_word)
+      end
+    new_sentence
+  end
+end
+
+# "hi cat and cathedral".easy_replace("cat", "dog")
+
+# substitute word
 class String
   define_method(:find_and_replace) do |find_word, replace_word|
     word_array = []
@@ -14,6 +29,8 @@ class String
   end
 end
 
+
+# counter
 class String
   define_method(:counter) do |find_word|
     word_array = []
